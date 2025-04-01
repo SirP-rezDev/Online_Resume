@@ -1,195 +1,100 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Online Resume</title>
-        <style>
-            .a {
-                height: 250px;
-                width: auto;
-                background-color: #153448;
-                transition: all 0.3s ease;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Perez | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 1.5s ease-in-out',
+                        slideUp: 'slideUp 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    },
+                    colors: {
+                        black: '#000000',
+                        gold: '#FFD700',
+                        white: '#FFFFFF',
+                    }
+                }
             }
-            .a:hover {
-                height: 400px;
-                width: auto;
-                background-color: #3C5B6F;
-            }
-            body {
-                margin: 0;
-                padding: 0;
-
-            }
-            #imgs {
-                height: 150px;
-                padding: 10px;
-                border-radius: 50%;
-                box-shadow: 0px 12px 10px black;
-                margin: 0 auto;
-                display: block;
-                transition: all 0.3s ease;
-            }
-            #imgs:hover {
-                height: 300px;
-
-            }
-            #nx {
-                height: 90px;
-                width: auto;
-                background-color: antiquewhite;
-                padding: 10px;
-                transition: all 0.3s ease;
-            }
-            #nx:hover{
-                height: 320px;
-                visibility: visible;
-
-            }
-            #names {
-                text-align: center;
-                display: block;
-                color: aliceblue;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                text-shadow: 0px 12px 20px aliceblue;
-                transition: all 0.3s ease;
-            }
-            #names:hover {
-                text-align: center;
-                color: gold;
-            }
-            #name {
-                text-align: center;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                text-shadow: 0px 12px 20px black;
-            }
-            .info {
-                text-indent: 50%;
-                color: #3C5B6F;
-                transition:  all 0.3s ease;
-                text-align: left;
-                opacity: 0%;
-                font-size: 30px
-                
-            }
-            .info:hover {
-                text-indent: 20px;
-                opacity: 100%;
-                text-align: left;
-               ;
-            }
-            pre {
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 20px;
-            }
-            #edu {
-                height: 90px;
-                width: auto;
-                background-color: #948979;
-                transition: all 0.3s ease;
-                padding-top: 10px;
-            }
-            #edu:hover {
-                height: 320px;
-                width: auto;
-                background-color: #948979;
-            }
-            .xper {
-                height: 90px;
-                width: auto;
-                background-color: #3C5B6F;
-                transition: all 0.3s ease;
-                padding: 10px;
-            }
-            .xper:hover {
-                height: 320px;
-                width: auto;
-            }
-            .infos {
-                text-indent: 50%;
-                color: white;
-                transition:  all 0.3s ease;
-                text-align: left;
-                opacity: 0%;
-                font-size: 30px;
-                
-            }
-            .infos:hover {
-                text-indent: 20px;
-                opacity: 100%;
-                text-align: left;
-            }
-            .contact {
-                height: 90px;
-                width: auto;
-                background-color: #DFD0B8;
-                padding: 10px;
-                transition: all 0.3s ease;
-            }
-            .contact:hover {
-                height: auto;
-            }
-            footer {
-                font-size: large;
-                color: aliceblue;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="a">
-            <img id="imgs" src="p1.jpg" alt="C:\Users\PC Admin\Downloads\newdamnload\WebbyResume">
-            <div id="side">
-                <h1 id="names">Brian Perez</h1>
-                <ul>
-                    <pre class="info">BSIT 2A</pre>
-                </ul>
-            </div>
-        </div>
-        <div id="nx">
-            <h1 id="name">Personal Detail</h1>
-            <ul>
-                <h3 class="info">
-                    <pre>Fullname: Brian Clemente Perez</pre>
-                    <pre>Age: 24 yrs old</pre>
-                    <pre>Gender: Male</pre>
-                    <pre>Birthdate: June 22, 1999</pre>
-                    <pre>Birthplace: Lucena ata</pre>
-                </h3>
-            </ul>
-            
-        </div>
-        <div id="edu">
-            <h1 id="name">Educational Background</h1>
-            <ul>
-                <h3 class="info">
-                    <pre>Primary: North 3, Elementary School</pre>
-                    <pre>Secondary: Gulang Gulang National HighSchool</pre>
-                    <pre>College: Dalubhasaan ng Lungsod ng Lucena</pre>
-                </h3>
+        };
+    </script>
+    <style>
+        /* Add smooth scroll effect to the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 shadow-lg z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gold">SirP-rezDev</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#personal" class="hover:text-gold transition">Personal Details</a></li>
+                <li><a href="#education" class="hover:text-gold transition">Education</a></li>
+                <li><a href="#expertise" class="hover:text-gold transition">Expertise</a></li>
+                <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
             </ul>
         </div>
-        <div class="xper">
-            <h1 id="name">Expertise</h1>
-            <ul>
-                <h3 class="infos">
-                    <li>Data Science (Python)</li>
-                    <li>Web Development (HTML, CSS and Javascript)</li>
-                    <li>Graphic Design (Figma)</li>
-                </h3>
+    </nav>
+    
+    <header class="text-center py-20 animate-fadeIn">
+        <img class="w-40 h-40 rounded-full mx-auto shadow-lg hover:scale-110 transition transform duration-300 hover:rotate-3" src="p1.jpg" alt="Profile Picture">
+        <h1 class="text-4xl font-bold mt-4 animate-slideUp text-gold">Brian Perez</h1>
+        <p class="text-lg text-gray-400 animate-slideUp">Full Stack Developer | Data Science Enthusiast</p>
+    </header>
+    
+    <main class="max-w-4xl mx-auto p-6">
+        <section id="personal" class="mb-10 animate-fadeIn">
+            <h2 class="text-2xl font-semibold mb-2 border-b-2 border-gold pb-2">Personal Details</h2>
+            <ul class="text-gray-300 space-y-1">
+                <li><strong>Full Name:</strong> Brian Clemente Perez</li>
+                <li><strong>Age:</strong> 24</li>
+                <li><strong>Gender:</strong> Male</li>
+                <li><strong>Birthdate:</strong> June 22, 1999</li>
+                <li><strong>Birthplace:</strong> Lucena</li>
             </ul>
-        </div>
-        <div class="contact">
-            <h1 id="name">Contact</h1>
-            <nav class="info">
-                <ul>
-                    <pre>
-                        <h1 class="info">Facebook: Brian Perez
-                            <a href="https://www.facebook.com/Brianpere" target="_blank">https://www.facebook.com/Brianpere</a>
-                            <h1>Github: SirP-rezDev</h1>
-                                <a style="text-indent: 50%;" href="https://github.com/SirP-rezDev" target="_blank">https://github.com/SirP-rezDev</a>    
-                        </h1>    
-                    </pre>
-                </ul>
-            </nav>
-        </div>
-    </body>
-    <footer>&copy;SirP-rezDev Copyright</footer>
+        </section>
+        
+        <section id="education" class="mb-10 animate-slideUp">
+            <h2 class="text-2xl font-semibold mb-2 border-b-2 border-gold pb-2">Educational Background</h2>
+            <ul class="text-gray-300 space-y-1">
+                <li><strong>Primary:</strong> North 3 Elementary School</li>
+                <li><strong>Secondary:</strong> Gulang Gulang National High School</li>
+                <li><strong>College:</strong> Dalubhasaan ng Lungsod ng Lucena</li>
+            </ul>
+        </section>
+        
+        <section id="expertise" class="mb-10 animate-fadeIn">
+            <h2 class="text-2xl font-semibold mb-2 border-b-2 border-gold pb-2">Expertise</h2>
+            <ul class="text-gray-300 space-y-2">
+                <li class="flex items-center space-x-2"><span class="text-gold">✔</span> Data Science (Python)</li>
+                <li class="flex items-center space-x-2"><span class="text-gold">✔</span> Web Development (HTML, CSS, JavaScript, React)</li>
+                <li class="flex items-center space-x-2"><span class="text-gold">✔</span> Graphic Design (Figma)</li>
+            </ul>
+        </section>
+        
+        <section id="contact" class="mb-10 animate-slideUp">
+            <h2 class="text-2xl font-semibold mb-2 border-b-2 border-gold pb-2">Contact</h2>
+            <p><strong>Facebook:</strong> <a class="text-blue-400 hover:underline transition hover:text-blue-600" href="https://www.facebook.com/Brianpere" target="_blank">facebook.com/Brianpere</a></p>
+            <p><strong>GitHub:</strong> <a class="text-blue-400 hover:underline transition hover:text-blue-600" href="https://github.com/SirP-rezDev" target="_blank">github.com/SirP-rezDev</a></p>
+        </section>
+    </main>
+    
+    <footer class="text-center py-6 border-t border-gray-700 text-gray-400 animate-fadeIn">&copy; 2025 Brian Perez. All Rights Reserved.</footer>
+</body>
 </html>
